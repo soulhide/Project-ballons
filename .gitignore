@@ -1,2 +1,3 @@
 # игнорируем .map
-    *map
+    *.map
+    *.css.map
