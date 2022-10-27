@@ -1,3 +1,39 @@
+@keyframes BtnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes lefttoright {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes righttoleft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -9,11 +45,6 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #777777;
-  font-size: 1.6rem;
-  letter-spacing: 0.2px;
   padding: 5rem;
   background-color: #FAFAFA;
 }
@@ -22,26 +53,12 @@ body {
   background-color: #F7F7F7;
 }
 
-.header {
-  position: relative;
-  height: 95vh;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/header-background.jpg) center/cover no-repeat;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-}
-.header__logo {
-  position: absolute;
-  left: 5rem;
-  top: 5rem;
-  height: 7rem;
-  width: 5.6rem;
-}
-.header__box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #777777;
+  font-size: 1.6rem;
+  letter-spacing: 0.2px;
 }
 
 .title-first {
@@ -117,39 +134,24 @@ body {
   animation-fill-mode: backwards;
 }
 
-@keyframes BtnToUp {
-  0% {
-    opacity: 0;
-    transform: translateY(5rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/header-background.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
-@keyframes lefttoright {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  80% {
-    transform: translateX(1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.header__logo {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  height: 7rem;
+  width: 5.6rem;
 }
-@keyframes righttoleft {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  80% {
-    transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
