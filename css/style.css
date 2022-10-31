@@ -103,17 +103,44 @@ body {
   color: transparent;
   transition: all 0.4s;
   backface-visibility: hidden;
+  -webkit-user-select: none;
 }
 .title-secondary:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
   text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
 
+.title-third {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  line-height: 140%;
+  font-weight: 400;
+}
+
 .text-align-center {
   text-align: center;
 }
 
-.margin-bottom-8rem {
+.margin-bottom-10px {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-30px {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-50px {
+  margin-bottom: 5rem;
+}
+
+.margin-bottom-80px {
   margin-bottom: 8rem;
 }
 
@@ -159,6 +186,60 @@ body {
   animation-fill-mode: backwards;
 }
 
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  color: #BA8554;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px #BA8554 solid;
+  transition: 0.5s all;
+}
+.btn-text:hover {
+  background-color: #BA8554;
+  color: #FAFAFA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1rem);
+}
+.btn-text:active {
+  transform: translateY(0rem);
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  position: absolute;
+  width: 55%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  z-index: 10;
+  transition: all 0.2s;
+  outline-offset: 1rem;
+}
+.composition__photo_n1 {
+  top: 0rem;
+  left: 0rem;
+}
+.composition__photo_n2 {
+  top: 2rem;
+  right: 0rem;
+}
+.composition__photo_n3 {
+  top: 13rem;
+  right: 10rem;
+}
+.composition__photo:hover {
+  outline: 1rem solid #BA8554;
+  transform: scale(1.1);
+  z-index: 20;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -183,7 +264,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background: #c89393;
   margin: 0 auto;
   margin-bottom: 8rem;
 }
@@ -221,7 +301,6 @@ body {
 }
 
 [class^=col-] {
-  background: #88af7f;
   float: left;
 }
 [class^=col-]:not(:last-child) {
