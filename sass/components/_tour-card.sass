@@ -12,12 +12,51 @@
         left: 0
         width: 100%
         backface-visibility: hidden
+        box-shadow: $box-shadow
         &_front
-            background: yellow
+        box-shadow: $box-shadow
         &_back
             transform: rotateY(180deg)
             background: linear-gradient(120deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brawn-dark, 0.7) 99.94%)
     &:hover &__side_front
-        transform: rotateY(180deg)
+        transform: rotateY(-180deg)
     &:hover &__side_back
         transform: rotateY(0deg)
+
+    &__img
+        height: 21rem
+        background: $color-brown-light  url(../img/card-1.jpg) center / cover no-repeat
+        background-blend-mode: hard-light
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+    &__title
+        position: absolute
+        font-size: 2.8rem
+        letter-spacing: .2rem
+        font-weight: 300
+        text-transform: uppercase
+        text-align: right
+        top: 17rem
+        right: 0rem
+    &__span
+        background: linear-gradient(90deg, $color-brown-light, $color-brawn-dark)
+        padding: 1rem 2rem .3rem 2rem
+        &_1
+        &_2
+            position: absolute
+            top: 3.4rem
+            right: 0rem
+            padding-bottom: 1rem
+            padding-top: 0rem
+    &__descr
+        ul
+            list-style: none
+            margin: 0 auto
+            width: 75%
+            li
+                text-align: center
+                font-size: $font-size-paragraph
+                letter-spacing: .2rem
+                color: $color-grey
+                border-bottom: 1px solid $color-grey
+                &:not(:last-child)
+                    margin-bottom: 2rem
