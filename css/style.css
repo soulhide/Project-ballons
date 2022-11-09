@@ -266,6 +266,7 @@ body {
   -moz-perspective: 150rem;
 }
 .card-tour__side {
+  overflow: hidden;
   position: absolute;
   height: 50rem;
   transition: 0.8s all ease-out;
@@ -274,6 +275,7 @@ body {
   left: 0;
   width: 100%;
   backface-visibility: hidden;
+  border-radius: 0.5rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
@@ -289,9 +291,17 @@ body {
 }
 .card-tour__img {
   height: 21rem;
-  background: #BA8554 url(../img/card-1.jpg) center/cover no-repeat;
   background-blend-mode: hard-light;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+.card-tour__img_1 {
+  background: #BA8554 url(../img/card-1.jpg) center/cover no-repeat;
+}
+.card-tour__img_2 {
+  background: #BA8554 url(../img/card-2.jpg) center/cover no-repeat;
+}
+.card-tour__img_3 {
+  background: #BA8554 url(../img/card-3.jpg) center/cover no-repeat;
 }
 .card-tour__title {
   position: absolute;
@@ -315,19 +325,41 @@ body {
   padding-top: 0rem;
 }
 .card-tour__descr ul {
+  text-align: center;
   list-style: none;
   margin: 0 auto;
   width: 75%;
 }
 .card-tour__descr ul li {
-  text-align: center;
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
   color: #777777;
   border-bottom: 1px solid #777777;
+  display: inline-block;
 }
 .card-tour__descr ul li:not(:last-child) {
   margin-bottom: 2rem;
+}
+.card-tour__backside-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-tour__text {
+  text-align: center;
+  margin-bottom: 8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #FAFAFA;
+}
+.card-tour__text_1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.card-tour__text_2 {
+  font-size: 6rem;
+  font-weight: 500;
 }
 
 .header {
