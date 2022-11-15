@@ -10,9 +10,11 @@
     padding-top: 5rem
     padding-left: 5rem
     &__grup:not(:last-child)
-        margin-bottom: 5rem
-    &__imput
-        width: 55%
+        margin-bottom: 2rem
+    &__grup:nth-child(4)
+        margin-bottom: 4rem
+    &__input
+        width: 75%
         font-size: $font-size-paragraph
         letter-spacing: .2rem
         font-weight: 400
@@ -35,9 +37,46 @@
         display: block
         margin-top: 1rem
         margin-left: 1.5rem
-        transition: .7s all
+        transition: .4s all
 
-    &__imput:placeholder-shown + &__lable
+    &__input:placeholder-shown + &__lable
         opacity: 0
         visibility: hidden
         transform: translateY(-3rem)
+
+    &__grup-radio
+        width: 40%
+        display: inline-block
+    &__input-radio
+        display: none
+    &__lable-radio
+        position: relative
+        cursor: pointer
+        padding-left: 4rem
+    &__button-radio
+        height: 3rem
+        width: 3rem
+        border-radius: 50%
+        border: .5rem solid $color-brawn-dark
+        display: block
+        position: absolute
+        left: 0
+        top: -.4rem
+        &::after
+            content: ""
+            display: block
+            height: 1.5rem
+            width: 1.5rem
+            border-radius: 50%
+            background: $color-brawn-dark
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: .4s all
+    &__input-radio:checked ~ &__lable-radio &__button-radio::after
+        opacity: 1
+        
+
+
