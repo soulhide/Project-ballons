@@ -643,31 +643,36 @@ body {
 .navigation__button {
   position: fixed;
   background: #FAFAFA;
-  height: 9rem;
-  width: 9rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 50%;
-  top: 7rem;
-  right: 7rem;
+  top: 10rem;
+  right: 10rem;
   z-index: 200;
+  text-align: center;
+  cursor: pointer;
 }
 .navigation__background {
   position: fixed;
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   background: radial-gradient(#BA8554, #A14F03);
-  top: 8rem;
-  right: 8rem;
+  top: 11rem;
+  right: 11rem;
   z-index: 100;
-  transform: scale(80);
+  /* transform: scale(80) */
+  transition: all 0.7s;
 }
 .navigation__nav {
   position: fixed;
   height: 100vh;
-  width: 100%;
   top: 0;
   right: 0;
   z-index: 150;
+  opacity: 0;
+  width: 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 .navigation__list {
   position: absolute;
@@ -675,6 +680,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   list-style: none;
+  width: 100%;
 }
 .navigation__item {
   text-align: center;
@@ -698,6 +704,52 @@ body {
   background-position: 100%;
   color: #A14F03;
   transform: translateX(1rem);
+}
+.navigation__toggle:checked ~ .navigation__background {
+  transform: scale(80);
+}
+.navigation__toggle:checked ~ .navigation__nav {
+  width: 100%;
+  opacity: 1;
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 37px;
+}
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  width: 30px;
+  height: 2px;
+  background: #000000;
+  display: inline-block;
+}
+.navigation__icon::before, .navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+.navigation__icon::before {
+  top: -8px;
+}
+.navigation__icon::after {
+  top: 8px;
+}
+.navigation__button:hover .navigation__icon::before {
+  top: -10px;
+}
+.navigation__button:hover .navigation__icon::after {
+  top: 10px;
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon {
+  background: transparent;
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
 }
 
 .section-about {
