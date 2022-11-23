@@ -3,7 +3,6 @@
     height: 50rem
     perspective: 150rem
     -moz-perspective: 150rem
-    
     &__side
         overflow: hidden
         position: absolute
@@ -69,6 +68,8 @@
                 display: inline-block
                 &:not(:last-child)
                     margin-bottom: 2rem
+                @include respond(tab-land)
+                    font-size: 1.5rem
     &__backside-box
         position: absolute
         top:50%

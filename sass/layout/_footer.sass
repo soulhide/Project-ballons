@@ -10,6 +10,9 @@
         display: inline-block
         &:not(:last-child)
             margin-right: 5rem
+        @include respond(tab-land)
+            &:not(:last-child)
+                margin-right: 1.6rem
     &__link
         &:link, &:visited
             display: inline-block
@@ -20,7 +23,6 @@
             letter-spacing: .2rem
             font-weight: 300
             transition: .3 all
-
         &:active
         &:hover
             transform: rotate(5deg) scale(1.2)

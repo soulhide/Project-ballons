@@ -6,13 +6,18 @@
     border-radius: .5rem
 
 .form
-    width: 60%
+    width: 70%
     padding-top: 5rem
     padding-left: 5rem
     &__grup:not(:last-child)
         margin-bottom: 2rem
     &__grup:nth-child(4)
         margin-bottom: 4rem
+    @include respond(tab-land)
+        &__grup:not(:last-child)
+            margin-bottom: 0
+        &__grup:nth-child(4)
+            margin-bottom: 3rem
     &__input
         width: 75%
         font-size: $font-size-paragraph
@@ -45,14 +50,20 @@
         transform: translateY(-3rem)
 
     &__grup-radio
-        width: 40%
         display: inline-block
+        &:not(:last-child)
+            margin-right: 2rem
+        @include respond(tab-land)
+            display: block
+            &:not(:last-child)
+                margin-bottom: 2rem
     &__input-radio
         display: none
     &__lable-radio
         position: relative
         cursor: pointer
         padding-left: 4rem
+
     &__button-radio
         height: 3rem
         width: 3rem
