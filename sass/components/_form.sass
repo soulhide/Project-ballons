@@ -4,11 +4,16 @@
     background: linear-gradient(115deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9) 57%, rgba(186,133,80,0.8) 57%, rgba(161,79,3,0.2)), url('../img/bg-form.jpg') center / cover no-repeat
     box-shadow: $box-shadow
     border-radius: .5rem
-
+    @include respond(tab-port)
+    background: linear-gradient(115deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9) 507%, rgba(186,133,80,0.8) 57%, rgba(161,79,3,0.2)), url('../img/bg-form.jpg') center / cover no-repeat
 .form
     width: 70%
     padding-top: 5rem
     padding-left: 5rem
+    @include respond(tab-port)
+        width: 100%
+        padding-top: 3rem
+        padding-left: 3rem
     &__grup:not(:last-child)
         margin-bottom: 2rem
     &__grup:nth-child(4)
@@ -29,12 +34,16 @@
         border: none
         border-bottom: .2rem solid transparent
         border-radius: .5rem
+        @include respond(tab-port)
+            width: 90%
+            box-shadow: $box-shadow
         &:focus
             outline: none
             border-bottom: .3rem solid #66D763
             box-shadow: $box-shadow
         &:focus:invalid
             border-bottom: .3rem solid #D76363
+        
     &__lable
         font-size: $font-size-paragraph 
         letter-spacing: .2rem

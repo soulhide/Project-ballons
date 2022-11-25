@@ -22,6 +22,10 @@ body
         backface-visibility: hidden
         @include respond(tab-land)
             font-size: 3.5rem
+        @include respond(tab-port)
+            font-size: 3.6rem
+            letter-spacing: 0.5rem
+            margin-bottom: 0
     &__secondary
         display: block
         font-weight: 100
@@ -37,6 +41,9 @@ body
         @include respond(tab-land)
             font-size: 3rem
             margin-bottom: 3.5rem
+        @include respond(tab-port)
+            font-size: 3.2rem
+            letter-spacing: .2rem
 
 .title-secondary
     display: inline-block
@@ -52,6 +59,8 @@ body
     -webkit-user-select: none
     @include respond(tab-land)
         font-size: 3rem
+    @include respond(tab-port)
+        letter-spacing: .6rem
     &:hover
         transform: skewY(2deg) skewX(15deg) scale(1.1)
         text-shadow: $shadow-h2

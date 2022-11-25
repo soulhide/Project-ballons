@@ -3,6 +3,8 @@
     height: 50rem
     perspective: 150rem
     -moz-perspective: 150rem
+    @include respond(tab-land)
+        height: 60rem
     &__side
         overflow: hidden
         position: absolute
@@ -15,6 +17,8 @@
         backface-visibility: hidden
         border-radius: .5rem
         box-shadow: $box-shadow
+        @include respond(tab-land)
+            height: 60rem
         &_front
         box-shadow: $box-shadow
         &_back
@@ -35,6 +39,8 @@
             background: $color-brown-light  url(../img/card-2.jpg) center / cover no-repeat
         &_3
             background: $color-brown-light  url(../img/card-3.jpg) center / cover no-repeat
+        @include respond(tab-port)
+            height: 30rem
     &__title
         position: absolute
         font-size: 2.8rem
@@ -44,6 +50,9 @@
         text-align: right
         top: 17rem
         right: 0rem
+        @include respond(tab-port)
+            top: 25rem
+            font-size: 3.8rem
     &__span
         background: linear-gradient(90deg, $color-brown-light, $color-brawn-dark)
         padding: 1rem 2rem .3rem 2rem
@@ -54,6 +63,8 @@
             right: 0rem
             padding-bottom: 1rem
             padding-top: 0rem
+            @include respond(tab-port)
+                top: 4.4rem
     &__descr
         ul
             text-align: center
@@ -70,6 +81,8 @@
                     margin-bottom: 2rem
                 @include respond(tab-land)
                     font-size: 1.5rem
+                @include respond(tab-port)
+                    font-size: 2rem
     &__backside-box
         position: absolute
         top:50%
