@@ -4,7 +4,7 @@
     perspective: 150rem
     -moz-perspective: 150rem
     @include respond(tab-land)
-        height: 60rem
+        height: auto
     &__side
         overflow: hidden
         position: absolute
@@ -17,15 +17,26 @@
         backface-visibility: hidden
         border-radius: .5rem
         box-shadow: $box-shadow
-        @include respond(tab-land)
-            height: 60rem
+        @include respond(tab-port)
+            height: auto
+            position: relative
         &_front
-        box-shadow: $box-shadow
+            box-shadow: $box-shadow
+        @include respond(tab-port)
+            padding-bottom: 13rem
         &_back
             transform: rotateY(180deg)
-            background: linear-gradient(120deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brawn-dark, 0.7) 99.94%)
+            background: linear-gradient(120deg, $color-brown-light, $color-brawn-dark)
+            @include respond(tab-port)
+                transform: rotateY(0deg)
+                padding: 5rem
+                padding-top: 12rem
+                margin-top: -11rem
+                clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
     &:hover &__side_front
         transform: rotateY(-180deg)
+        @include respond(tab-port)
+            transform: rotateY(0deg)
     &:hover &__side_back
         transform: rotateY(0deg)
 
@@ -88,6 +99,12 @@
         top:50%
         left:50%
         transform: translate(-50%,-50%)
+        @include respond(tab-port)
+            position: relative
+            top:0
+            left:0
+            transform: translate(0%,0%)
+            text-align: center
     &__text
         text-align: center
         margin-bottom: 8rem
