@@ -1,0 +1,22 @@
+{
+  "name": "1.0.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/style.sass css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soulhide/Project-ballons.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soulhide/Project-ballons/issues"
+  },
+  "homepage": "https://github.com/soulhide/Project-ballons#readme",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}
