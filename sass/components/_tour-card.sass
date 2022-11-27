@@ -3,7 +3,7 @@
     height: 50rem
     perspective: 150rem
     -moz-perspective: 150rem
-    @include respond(tab-port)
+    @media only screen and(max-width: 900px), (hover:none)
         height: auto
     &__side
         overflow: hidden
@@ -17,17 +17,17 @@
         backface-visibility: hidden
         border-radius: .5rem
         box-shadow: $box-shadow
-        @include respond(tab-port)
+        @media only screen and(max-width: 900px), (hover:none)
             height: auto
             position: relative
         &_front
             box-shadow: $box-shadow
-        @include respond(tab-port)
-            padding-bottom: 13rem
+            @media only screen and(max-width: 900px), (hover:none)
+                padding-bottom: 13rem
         &_back
             transform: rotateY(180deg)
             background: linear-gradient(120deg, $color-brown-light, $color-brawn-dark)
-            @include respond(tab-port)
+            @media only screen and(max-width: 900px), (hover:none)
                 transform: rotateY(0deg)
                 padding: 5rem
                 padding-top: 12rem
@@ -50,7 +50,7 @@
             background: $color-brown-light  url(../img/card-2.jpg) center / cover no-repeat
         &_3
             background: $color-brown-light  url(../img/card-3.jpg) center / cover no-repeat
-        @include respond(tab-port)
+        @media only screen and(max-width: 900px), (hover:none)
             height: 30rem
     &__title
         position: absolute
@@ -99,7 +99,7 @@
         top:50%
         left:50%
         transform: translate(-50%,-50%)
-        @include respond(tab-port)
+        @media only screen and(max-width: 900px), (hover:none)
             position: relative
             top:0
             left:0
