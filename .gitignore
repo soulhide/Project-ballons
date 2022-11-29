@@ -1,3 +1,5 @@
 # игнорируем .map
 *.map
 *.css.map
+
+*/node_modules
